@@ -5,8 +5,6 @@ class MemberController < ApplicationController
     end
 
     def show
-        @user = User.find(params[:id])
-        authorize! :read, @user
     end
 
 end

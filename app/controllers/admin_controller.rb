@@ -13,7 +13,7 @@ class AdminController < ApplicationController
 
     def create
         @user = User.new(user_params)
-        # @user.skip_confirmation!
+        @user.skip_confirmation!
             if @user.save
                 redirect_to admin_index_path
                 flash[:notice] = "User was successfully created."
